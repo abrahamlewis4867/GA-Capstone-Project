@@ -25,14 +25,15 @@ After this we chose our linear model that use the  most interpretable model and 
 
 
 ## Table of Contents
-The workflow for this project has been Divided up into five notebooks:  
-There are five notebooks. Four notebooks for each individual reservoir, and a fifth notebook notebook that summarizes our problems and findings.
+The workflow for this project has been divided up into five notebooks:  
+    
+Four notebooks for each individual reservoir, and a fifth notebook that summarizes our problems and findings.
 
-1. [main notebook](https://github.com/abrahamlewis4867/GA-Capstone-Project/blob/master/code/final.ipynb)
-1. [notebook for Chembarambakkam](https://github.com/abrahamlewis4867/GA-Capstone-Project/blob/master/code/chembarambakkam_eda_and_modeling.ipynb)
-1. [notebook for Poondi](https://github.com/abrahamlewis4867/GA-Capstone-Project/blob/master/code/poondi_eda_and_modeling.ipynb)
-1. [notebook for Redhills](https://github.com/abrahamlewis4867/GA-Capstone-Project/blob/master/code/redhills_eda_and_modeling.ipynb)
-1. [notebook for Cholavaram](https://github.com/abrahamlewis4867/GA-Capstone-Project/blob/master/code/cholavaram_eda_and_modeling.ipynb)
+1. [Main notebook](https://github.com/abrahamlewis4867/GA-Capstone-Project/blob/master/code/final.ipynb)
+1. [Notebook for Chembarambakkam](https://github.com/abrahamlewis4867/GA-Capstone-Project/blob/master/code/chembarambakkam_eda_and_modeling.ipynb)
+1. [Notebook for Poondi](https://github.com/abrahamlewis4867/GA-Capstone-Project/blob/master/code/poondi_eda_and_modeling.ipynb)
+1. [Notebook for Redhills](https://github.com/abrahamlewis4867/GA-Capstone-Project/blob/master/code/redhills_eda_and_modeling.ipynb)
+1. [Notebook for Cholavaram](https://github.com/abrahamlewis4867/GA-Capstone-Project/blob/master/code/cholavaram_eda_and_modeling.ipynb)
 
 
 ## Data Dictionary
