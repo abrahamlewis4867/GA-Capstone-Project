@@ -27,16 +27,7 @@ After this we chose our linear model that use the  most interpretable model and 
 ## Table of Contents
 
 
-1. [Data Dictionary](#Data-Dictionary)
-1. [Loading packages and data](#Loading-packages-and-data)
-1. [Data Cleaning](#Data-Cleaning)
-1. [EDA](#EDA)
-1. [Model Preparation](#Model-Preparation)
-1. [Modeling](#Modeling)
-1. [Model Selection](#Model-Selection)
-1. [Model evaluation](#Model-evaluation)
-1. [Conclusions and Recommendations](#Conclusions-and-Recommendations)
-2. [References](#References)
+1. [Chemmbak](GA-Capstone-Project/code/chembarambakkam_eda_and_modeling.ipynb)
 
 
 ## Data Dictionary
