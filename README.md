@@ -27,7 +27,7 @@ After this we chose our linear model that use the  most interpretable model and 
 ## Table of Contents
 
 
-1. [Chemmbak](chembarambakkam_eda_and_modeling.ipynb)
+1. [Chemmbak](https://github.com/abrahamlewis4867/GA-Capstone-Project/blob/master/code/chembarambakkam_eda_and_modeling.ipynb)
 
 
 ## Data Dictionary
