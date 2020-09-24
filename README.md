@@ -2,25 +2,25 @@
 ​
 ​
 *By: Asher Lewis* [Github](https://github.com/abrahamlewis4867)
-<img src="./assets/D9HGx7FVUAEawA-.jpeg" width="1400px">
+<img src="./assets/chennai-gif_0_SM.gif" width="1400px">>
 
 ## Problem Statement
 
-For this project we are going to try to forecast the average monthly water level for Chennai India’s 4 main reservoirs.The thershold of success of our model doing well enough that if it gets a R-squared($R^2$ ) of above an 65%. The reason for doing so is that in 2019 Chennai experienced a water crisis which had millions of people left without water and required many trains and truck to get the city water. If we can forecast monthly demand for a given reservoir we can get an idea of  how and when the cities reservoirs runs out of water. This information can potentially be used later down the line to predict the future water demand. The water level is measured in millions of cubic feet. We are going to score are predictions using $R^2$ metric.Water demand forecasting is hard in general so we have a rather modest goal for our model of scoring 65% which would translate to our model getting 65% of the dependent variable that's explained by an independent variable in a our regression models.
+For this project, we are going to try to forecast the average monthly water level for Chennai India's four main reservoirs using time-series data. The threshold of success of our model doing well enough that if it scores higher than the baseline model. The reason for doing so is that in 2019 Chennai experienced a water crisis which had millions of people left without water and required many trains and truck to get the city water. If we can forecast the monthly demand for a given reservoir we can get an idea of how and when the cities reservoirs run out of water. This information can potentially be used later down the line to predict future water demand. The water level is measured in millions of cubic feet. We are going to score our predictions using the Mean Squared Error (MSE). Water demand forecasting is hard in general so we have a rather modest goal for our model to score lower than the baseline's model MSE. This would translate to our model having an MSE closer to zero than the Baseline.regression models.
 
-<img src="./assets/chennai-gif_0_SM.gif" width="1400px">
+
 
 ## Executive Summary
 
-On 19 June 2019, Chennai city officials declared that "Day Zero", or the day when almost no water is left, had been reached, as all the four main reservoirs supplying water to the city had run dry.  First in this project we first combined our two given data sets we then formatted them so that they would be in the correct format for time-series analysis and forecasting.
+On 19 June 2019, Chennai city officials declared that "Day Zero", or the day when almost no water is left, had been reached, as all the four main reservoirs supplying water to the city had run dry. First in this project we first combined our two given data sets and saved them into a new csv for analysis and forecasting.
 
-We then visualized data and noticed trends and saw the up and down nature of both the water level and rain. 
-We then explained the what exactly time series data was and the components it uses such as lags and the potential problem of data not being stationary. We then determined significant lags.
+The workflow was than broken up in four separate notebooks with this fifth one serving as the place where the notebooks could all come together.
 
-After this we split our data and modeled. We ran a baseline model on each one of the reservoirs. After that we ran a Linear regression model on each of the reservoirs . 
-For our best preforming model we ran an additional model for interoperability. To improve this model's $R^2$  score we also ran a linear model using rain as an Exogenous Variable.
+In each notebook, we analyzed trends and the nature of both the water level and rain. 
+We then explained some elements of time-series data, such as the potential problem of data not being stationary. 
 
-After this we chose our linear model that use the  most interpretable model and did some model evaluation and check if it violated any LINE assumptions. We  also interpreted some of the coefficients. At the end we looked at the forecast that our chosen model made.
+After this, we split our data and modeled. We ran a baseline model on each one of the reservoirs. After that, we ran an ARIMA model on each reservoir. 
+For the ARIMA model, we looked at the residuals and plotted the predictions.
 
 
 
@@ -29,11 +29,11 @@ The workflow for this project has been divided up into five notebooks:
     
 Four notebooks for each individual reservoir, and a fifth notebook that summarizes our problems and findings.
 
-1. [Main notebook](https://github.com/abrahamlewis4867/GA-Capstone-Project/blob/master/code/final.ipynb)
-1. [Notebook for Chembarambakkam](https://github.com/abrahamlewis4867/GA-Capstone-Project/blob/master/code/chembarambakkam_eda_and_modeling.ipynb)
-1. [Notebook for Poondi](https://github.com/abrahamlewis4867/GA-Capstone-Project/blob/master/code/poondi_eda_and_modeling.ipynb)
-1. [Notebook for Redhills](https://github.com/abrahamlewis4867/GA-Capstone-Project/blob/master/code/redhills_eda_and_modeling.ipynb)
-1. [Notebook for Cholavaram](https://github.com/abrahamlewis4867/GA-Capstone-Project/blob/master/code/cholavaram_eda_and_modeling.ipynb)
+1. [Main notebook](https://github.com/abrahamlewis4867/GA-Capstone-Project/blob/master/code/main_notebook.ipynb)
+1. [Notebook for Chembarambakkam](https://github.com/abrahamlewis4867/GA-Capstone-Project/blob/master/code/notebook_for_chembarambakkam_reservoir.ipynb)
+1. [Notebook for Poondi](https://github.com/abrahamlewis4867/GA-Capstone-Project/blob/master/code/notebook_for_poondi_reservoir.ipynb)
+1. [Notebook for Redhills](https://github.com/abrahamlewis4867/GA-Capstone-Project/blob/master/code/notebook_for_redhills_reservoir.ipynb)
+1. [Notebook for Cholavaram](https://github.com/abrahamlewis4867/GA-Capstone-Project/blob/master/code/notebook_for_cholavaram_reservoir.ipynb)
 
 
 ## Data Dictionary
@@ -52,30 +52,22 @@ Four notebooks for each individual reservoir, and a fifth notebook that summariz
 
 Our data comes from [Chennai Metro and Sewer](https://chennaimetrowater.tn.gov.in/) and was gathered together on Kaggle. It contains data daily data from 2004 to the end of 2019.
 
-## Models
 
-Model Name | Training Score | Testing Score
-- | -| -
-Chembarambakkam Baseline|0|-67%
-Chembarambakkam Linear Regression| 91%  | 87%
-Chembarambakkam Linear Regression(stats model)| 91%  | 87%
-Chembarambakkam Linear Regression with Exogenous Variable|93% |92% 
-Poondi Baseline|0|-248%
-Poondi Linear Regression| 87% | 69%
-Redhills Baseline|0|-339%
-Linear Regression Redhills| 85% | 77%
-Cholavaram Baseline|0|-152%
-Cholavaram Linear Regression| 83% | 74%
+
 
 ## Conclusions and Recommendations
 
-All of our models mangaged to get above our problem statments goal of higher score than 65% $R^2$. In fact most of them did quite well. Some this might be explained by even though we were dealing with nonstationary time-series our X and Y generally don't stay perfectly over long periods of time. In our model we saw that significant leading correlations with lags were hard to find so our regression models may be better at predicting the present than the future. Still at the end of the day regression models are quite powerful as well as being interpretable.
+All of our models managed to get above our problem statement's goal of higher MSE score than the baseline model.
 
-There are many things we can do in the future such as implementing more complex Models such as ARIMA and SARIMA models. Another thing we could do is run the are existing models with differencing the data. Another thing we could have done is regularize the data.
+Time-series data is a very difficult task and I wish I had more time, more time to go in-depth to see things that are very elusive and have to be pulled out. The seasons define us and the trends need to be explored
+
+There are many things we can do in the future such as implementing more complex Models such as SARIMA and var models. Another thing we could do is run the are existing models with differencing the data. Another thing we could have done is regularize the data.
 
 It goes without being said but always getting more data is better. It would be nice to have such features such as temperature and exact water usage.
 
-In terms of the data it was fascinating to see how in the data how much everything is man made from the reservoirs themselves to the water scarcity problem with the data. I would suggest better collection methods of water during the monsoon season. Another thing I would suggest is to get a better record of how the the people use the water. This is truly a crisis that unfortunately awaits most cites unless we take the proper action.
+
+In terms of the data, it was fascinating to see how in the data how much everything is man-made from the reservoirs themselves to the water scarcity problem with the data. I would suggest better collection methods of water during the monsoon season. Another thing I would suggest is to get a better record of how people use the water. This is truly a crisis that unfortunately awaits most cites unless we take the proper action.
+
 
 
 ## References
